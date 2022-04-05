@@ -1,104 +1,173 @@
 * {
-   font-family: sans-serif;
    margin: 0;
    padding: 0;
+   box-sizing: border-box;
+   font-size: 14px;
+   color: #555;
 }
 
 body {
+   height: 100vh;
    overflow-x: hidden;
-}
-
-div {
-   width: 50px;
-   height: 50px;
-   border: 1px solid black;
-}
-
-main {
-   background-color: pink;
+   font-family: Helvetica, sans-serif;
    display: flex;
    flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   width: 100vw;
-   min-height: calc(100vh - 150px);
-   gap: 20px;
+   justify-content: space-between;
 }
 
-main > div {
-   width: 400px;
-   max-width: 90vw;
-}
-
-main > div:nth-child(3) {
-   display: flex;
-   justify-content: center;
-   gap: 10px;
-}
-
+/* 
 @media (max-width: 730px) {
    main > div:nth-child(3) {
       display: none;
    }
-}
-
-main > div:nth-child(3) > div {
-   width: 100px;
-}
+} */
 
 nav {
    display: flex;
    justify-content: space-between;
-   height: 50px;
+   height: 60px;
+   padding: 20px 10px;
 }
 
-.hidden {
+/* .hidden {
    display: none;
-}
+} */
 
-@media (max-width: 730px) {
+/* @media (max-width: 730px) {
    .hidden {
       display: initial;
-   }
+   } */
 
-   nav > div > div:nth-child(1),
-   nav > div > div:nth-child(2) {
-      display: none;
-   }
-}
-
-nav > div {
-   width: 50%;
+ul {
    display: flex;
+   list-style: none;
+   align-items: center;
+   flex-direction: row;
 }
 
-nav > div:nth-child(2) {
-   justify-content: flex-end;
+li {
+   text-align: center;
+   padding: 14px 12px;
 }
 
-footer {
-   height: 100px;
+a {
+   text-decoration: none;
 }
 
-footer > div {
-   width: 100vw;
+li a:hover {
+   text-decoration: underline;
 }
 
-footer > div > div {
-   width: 33%;
+.small-text {
+   font-size: 0.9rem;
 }
 
-footer > div:nth-child(2) {
+.grid-bg {
+   width: 90px;
+   height: 40px;
+   border-radius: 90px;
+}
+
+.grid-bg:hover {
+   background-color: rgba(100, 100, 100, 1);
+   cursor: pointer;
+}
+
+.menu-button {
+   width: 25px;
+   margin: auto;
+   object-fit: contain;
+}
+
+.avatar {
+   border-radius: 40px;
+   margin-top: 6px;
+   width: 40px;
+   size: small;
+}
+
+.search-wrapper {
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 10px;
+   align-items: center;
+   margin: auto;
+   object-fit: contain;
+}
+
+form {
+   position: relative;
+   margin-top: 30px;
+}
+
+input {
+   width: 600px;
+   height: 45px;
+   padding-left: 50px;
+   font-size: 1.2rem;
+   border-radius: 45px;
+   border: 1px solid #d3d3d3;
+}
+
+input:hover {
+   box-shadow: 0 1px 3px 1px rgba(201, 201, 0.5);
+}
+
+input:focus {
+   outline: none;
+}
+
+.search {
+   width: 20px;
+   position: absolute;
+   top: 15px;
+   left: 15px;
+}
+
+.mic {
+   width: 20px;
+   position: absolute;
+   top: 12px;
+   left: 560px;
+}
+
+.buttons {
+   width: 350px;
+   margin: auto;
+   margin-top: 30px;
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+}
+button {
+   border: 1px solid transparent;
+   padding: 8px 12px;
+   background-color: #f8f9fa;
+   border-radius: 5px;
+}
+
+button:hover {
+   border: 1px solid #eee;
+   box-shadow: 0 0 2px 1px rgba (189, 189, 189, 0.5);
+   cursor: pointer;
+}
+
+.footer {
+   width: 100%;
+   background-color: #f2f2f2;
+}
+
+.panel {
+   border-bottom: 1px solid #ddd;
+   height: 50px;
    display: flex;
    justify-content: space-between;
+   padding: 15px;
 }
 
-footer > div > div:nth-child(1),
-footer > div > div:nth-child(3) {
-   display: flex;
-   gap: 10px;
-}
-
-footer > div > div:nth-child(3) {
-   justify-content: flex-end;
+p {
+   color: grey;
+   padding-left: 13px;
 }
